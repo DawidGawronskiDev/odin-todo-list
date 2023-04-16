@@ -4,3 +4,255 @@
     font-weight: 600;
     font-style: normal;
 } */
+
+:root {
+  --c000: hsl(0, 0%, 0%);
+  --c100: hsl(0, 0%, 10%);
+  --c200: hsl(0, 0%, 20%);
+  --c300: hsl(0, 0%, 30%);
+  --c400: hsl(0, 0%, 40%);
+  --c500: hsl(0, 0%, 50%);
+  --c600: hsl(0, 0%, 60%);
+  --c700: hsl(0, 0%, 70%);
+  --c800: hsl(0, 0%, 80%);
+  --c900: hsl(0, 0%, 90%);
+  --c1000: hsl(0, 0%, 100%);
+
+  --aside-w: 250px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--c900);
+}
+
+.heading-l {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* ########## ASIDE ########## */
+
+.aside {
+  position: fixed;
+  z-index: 888;
+
+  width: var(--aside-w);
+  height: 100vh;
+
+  background: var(--c100);
+
+  padding: 40px;
+}
+
+.aside > .container {
+  width: 100%;
+  margin-top: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside > .container img {
+  aspect-ratio: 1 / 1;
+  width: 32px;
+
+  cursor: pointer;
+}
+
+.aside ul {
+  width: 100%;
+}
+
+.aside ul li {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100fr repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: var(--c200);
+  border-radius: 5px;
+
+  margin-top: 12px;
+  padding: 8px 16px;
+}
+
+/* ########## PROJECT LIST ########## */
+
+#projectList .container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#projectList img {
+  aspect-ratio: 1 / 1;
+  width: 24px;
+
+  cursor: pointer;
+}
+
+.project-list-item {
+  cursor: pointer;
+}
+
+/* ########## MAIN ########## */
+
+.main {
+  width: calc(100% - var(--aside-w));
+  height: 100vh;
+
+  background-color: var(--c300);
+
+  margin-left: var(--aside-w);
+
+  padding: 40px;
+}
+
+.main > .container {
+  width: 80%;
+
+  margin: 48px auto 0 auto;
+}
+
+.main ul {
+  width: 100%;
+}
+
+.main ul li {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100fr repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: var(--c200);
+  border-radius: 5px;
+
+  margin-top: 12px;
+  padding: 8px 16px;
+}
+
+/* ########## TASK LIST ########## */
+
+#taskList .container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#taskList img {
+  aspect-ratio: 1 / 1;
+  width: 24px;
+
+  cursor: pointer;
+}
+
+.task-list-item {
+  cursor: pointer;
+}
+
+/* ########## ADD PROJECT CONTAINER ########## */
+
+#addProjectContainer {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+
+  max-width: 500px;
+  height: auto;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--c100);
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.8);
+
+  padding: 32px;
+  border-radius: 8px;
+}
+
+#addProjectContainer form {
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+
+  display: flex;
+  gap: 32px;
+}
+
+#addProjectContainer form > * {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+#addProjectContainer button {
+  cursor: pointer;
+
+  background-color: var(--c200);
+  color: var(--c1000);
+}
+
+#addProjectContainer img {
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  width: 32px;
+
+  margin-bottom: 16px;
+}
